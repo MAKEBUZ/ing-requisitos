@@ -10,6 +10,17 @@ class Usuario:
         }
         user.puntos = 0
 
+    def modificar_informacion(self, nueva_contrasenha=None, nueva_marca=None, nuevo_numero=None, nuevo_vencimiento=None, nuevo_cvv=None):
+        if nueva_contrasenha:
+            self.contrasenha = nueva_contrasenha
+        if nueva_marca or nuevo_numero or nuevo_vencimiento or nuevo_cvv:
+            self.informacion_tarjeta_credito.update({
+                "marca": nueva_marca or self.informacion_tarjeta_credito["marca"],
+                "numero": nuevo_numero or self.informacion_tarjeta_credito["numero"],
+                "vencimiento": nuevo_vencimiento or self.informacion_tarjeta_credito["vencimiento"],
+                "cvv": nuevo_cvv or self.informacion_tarjeta_credito["cvv"]
+            })
+
     def comprar_articulo(user, precio):
         if user.informacion_tarjeta_credito:
             user.puntos += precio // 10
@@ -104,9 +115,11 @@ while True:
     print("\n1. Crear Cuenta")
     print("2. Comprar Artículo")
     print("3. Canjear Puntos por Premio")
-    print("4. Mostrar Productos")
-    print("5. Mostrar Premios")
-    print("6. Salir")
+    print("4. Modificar Información de la Cuenta")
+    print("5. Ver Información de la Cuenta")
+    print("6. Mostrar Productos")
+    print("7. Mostrar Premios")
+    print("8. Salir")
     
     eleccion = input("Seleccione una opción: ")
     
@@ -150,17 +163,49 @@ while True:
         print("")
     elif eleccion == "4":
         print("")
+        nombre_usuario = input("Ingrese nombre de usuario: ")
+        usuario = usuarios.get(nombre_usuario)
+        if usuario:
+            print("Modificar Información de la Cuenta:")
+            nueva_contrasenha = input("Nueva contraseña (dejar en blanco si no quieres cambiarla): ")
+            nueva_marca = input("Nueva marca de la tarjeta (dejar en blanco si no quieres cambiarla): ")
+            nuevo_numero = input("Nuevo número de tarjeta (dejar en blanco si no quieres cambiarlo): ")
+            nuevo_vencimiento = input("Nuevo vencimiento de tarjeta (dejar en blanco si no quieres cambiarlo): ")
+            nuevo_cvv = input("Nuevo CVV (dejar en blanco si no quieres cambiarlo): ")
+
+            usuario.modificar_informacion(nueva_contrasenha, nueva_marca, nuevo_numero, nuevo_vencimiento, nuevo_cvv)
+            print("Información de la cuenta modificada.")
+        else:
+            print("Usuario no encontrado.")
+        print("")
+    elif eleccion == "5":
+        print("")
+        nombre_usuario = input("Ingrese nombre de usuario: ")
+        usuario = usuarios.get(nombre_usuario)
+        if usuario:
+            print("Información de la Cuenta:")
+            print(f"Nombre de Usuario: {usuario.nombre_usuario}")
+            print(f"Marca de Tarjeta: {usuario.informacion_tarjeta_credito['marca']}")
+            print(f"Número de Tarjeta: {usuario.informacion_tarjeta_credito['numero']}")
+            print(f"Fecha de Vencimiento: {usuario.informacion_tarjeta_credito['vencimiento']}")
+            # No se muestra el CVV por seguridad
+            print(f"Puntos: {usuario.puntos}")
+        else:
+            print("Usuario no encontrado.")
+        print("")
+    elif eleccion == "6":
+        print("")
         print("Productos Disponibles:")
         for indice, producto in enumerate(productos, start=1):
             print(f"{indice}. {producto.nombre} - ${producto.precio}")
         print("")
-    elif eleccion == "5":
+    elif eleccion == "7":
         print("")
         print("Premios Disponibles:")
         for indice, premio in enumerate(premios, start=1):
             print(f"{indice}. {premio.nombre} - {premio.puntos_requeridos} puntos")
         print("")
-    elif eleccion == "6":
+    elif eleccion == "8":
         print("")
         print("Saliendo del programa.")
         break
