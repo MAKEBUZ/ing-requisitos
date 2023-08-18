@@ -15,6 +15,8 @@
 •Validar la identificacion y la tarjeta de crédito.
 
 
+
+
 °°|Requisitos NO Funcionales Caso del Tren:|°°
 
 •Abeas Data.
