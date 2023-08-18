@@ -1,6 +1,6 @@
 # ing-requisitos
 
-Requisitos Funcionales:
+°°|Requisitos Funcionales:|°°
 
 •	Los usuarios deben poder crear una cuenta.
 
@@ -16,8 +16,11 @@ Requisitos Funcionales:
 
 •	Debe haber una opción para poder reclamar premios por los puntos acumulados.
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
-Requisitos No Funcionales:
+°°|Requisitos No Funcionales:|°°
 
 •	Seguridad:  Debe incluir un sistema de cifrado para los datos personales y para la información de las tarjetas de crédito.
 •	Privacidad de los datos personales
