@@ -14,7 +14,7 @@
 
 •	Debe de haber un sistema de validación de la tarjeta de crédito (De si es verdadera o no).
 
-•	Debe haber una opción para poder reclamar premios por los puntos acumulados.
+•	Debe haber una opción para poder reclamar premios por los puntos acumulados. (La verificación se hara por medio de una llamada telefonica).
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
