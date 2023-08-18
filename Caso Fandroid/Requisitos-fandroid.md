@@ -31,10 +31,11 @@
 
 •	Usabilidad: Que sea intuitivo de manejar.
 
-•	Compatibilidad con todos los exploradores.
+•	Compatibilidad con todos los exploradores y sistemas operativos
 
 •	Mantenibilidad, corrección de errores y mejoras.
 
 •	Eficiencia en el tiempo de respuesta
 
 •	Abeas Data
+
