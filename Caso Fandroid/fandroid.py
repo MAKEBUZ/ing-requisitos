@@ -101,8 +101,7 @@ productos = [
     Producto("Casco", 150),
     Producto("Motocicleta", 3000),
     Producto("Guantes", 50),
-    Producto("Consola",1899)
-    
+    Producto("Consola",1899) 
 ]
 
 premios = [
@@ -117,9 +116,7 @@ while True:
     print("3. Canjear Puntos por Premio")
     print("4. Modificar Información de la Cuenta")
     print("5. Ver Información de la Cuenta")
-    print("6. Mostrar Productos")
-    print("7. Mostrar Premios")
-    print("8. Salir")
+    print("6. Salir")
     
     eleccion = input("Seleccione una opción: ")
     
@@ -130,36 +127,28 @@ while True:
     elif eleccion == "2":
         print("")
         nombre_usuario = input("Ingrese nombre de usuario: ")
-        usuario = usuarios.get(nombre_usuario)
-        if usuario:
-            print("Productos Disponibles:")
-            for indice, producto in enumerate(productos, start=1):
-                print(f"{indice}. {producto.nombre} - ${producto.precio}")
-            eleccion_producto = int(input("Seleccione un producto para comprar: "))
-            if 1 <= eleccion_producto <= len(productos):
-                producto_seleccionado = productos[eleccion_producto - 1]
-                comprar_articulo(nombre_usuario, producto_seleccionado.precio)
-            else:
-                print("Elección de producto inválida.")
+        print("Productos Disponibles:")
+        for indice, producto in enumerate(productos, start=1):
+            print(f"{indice}. {producto.nombre} - ${producto.precio}")
+        eleccion_producto = int(input("Seleccione un producto para comprar: "))
+        if 1 <= eleccion_producto <= len(productos):
+            producto_seleccionado = productos[eleccion_producto - 1]
+            comprar_articulo(nombre_usuario, producto_seleccionado.precio)
         else:
-            print("Usuario no encontrado.")
+            print("Elección de producto inválida.")
         print("")
     elif eleccion == "3":
         print("")
         nombre_usuario = input("Ingrese nombre de usuario: ")
-        usuario = usuarios.get(nombre_usuario)
-        if usuario:
-            print("Premios Disponibles:")
-            for indice, premio in enumerate(premios, start=1):
-                print(f"{indice}. {premio.nombre} - {premio.puntos_requeridos} puntos")
-            eleccion_premio = int(input("Seleccione un premio para canjear: "))
-            if 1 <= eleccion_premio <= len(premios):
-                premio_seleccionado = premios[eleccion_premio - 1]
-                canjear_puntos(nombre_usuario, premio_seleccionado.puntos_requeridos)
-            else:
-                print("Elección de premio inválida.")
+        print("Premios Disponibles:")
+        for indice, premio in enumerate(premios, start=1):
+            print(f"{indice}. {premio.nombre} - {premio.puntos_requeridos} puntos")
+        eleccion_premio = int(input("Seleccione un premio para canjear: "))
+        if 1 <= eleccion_premio <= len(premios):
+            premio_seleccionado = premios[eleccion_premio - 1]
+            canjear_puntos(nombre_usuario, premio_seleccionado.puntos_requeridos)
         else:
-            print("Usuario no encontrado.")
+            print("Elección de premio inválida.")
         print("")
     elif eleccion == "4":
         print("")
@@ -188,24 +177,11 @@ while True:
             print(f"Marca de Tarjeta: {usuario.informacion_tarjeta_credito['marca']}")
             print(f"Número de Tarjeta: {usuario.informacion_tarjeta_credito['numero']}")
             print(f"Fecha de Vencimiento: {usuario.informacion_tarjeta_credito['vencimiento']}")
-            # No se muestra el CVV por seguridad
             print(f"Puntos: {usuario.puntos}")
         else:
             print("Usuario no encontrado.")
         print("")
     elif eleccion == "6":
-        print("")
-        print("Productos Disponibles:")
-        for indice, producto in enumerate(productos, start=1):
-            print(f"{indice}. {producto.nombre} - ${producto.precio}")
-        print("")
-    elif eleccion == "7":
-        print("")
-        print("Premios Disponibles:")
-        for indice, premio in enumerate(premios, start=1):
-            print(f"{indice}. {premio.nombre} - {premio.puntos_requeridos} puntos")
-        print("")
-    elif eleccion == "8":
         print("")
         print("Saliendo del programa.")
         break
