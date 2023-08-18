@@ -98,16 +98,16 @@ def canjear_puntos(nombre_usuario, puntos_requeridos):
         print("Usuario no encontrado.")
 
 productos = [
-    Producto("Casco", 150),
-    Producto("Motocicleta", 3000),
-    Producto("Guantes", 50),
-    Producto("Consola",1899) 
+    Producto("GameYiar34", 150),
+    Producto("Genshin Impact month pass", 3000),
+    Producto("Canvas Pro", 50),
+    Producto("Warzone,1899) 
 ]
 
 premios = [
-    Premio("Balón", 50),
-    Premio("Juego de Mesa", 130),
-    Premio("Guantes", 20)
+    Premio("Balón", 500),
+    Premio("Juego de Mesa", 1300),
+    Premio("Guantes", 200)
 ]
 
 while True:
