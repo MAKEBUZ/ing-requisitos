@@ -27,7 +27,7 @@
 
 •	Rendimiento: Eficiencia en la compra de artículos y en el reclamo de puntos acumulados
 
-•	Disponibilidad: Que se pueda usar en cualquier sistema.
+•	Disponibilidad: Que este funcional 24/7
 
 •	Usabilidad: Que sea intuitivo de manejar.
 
