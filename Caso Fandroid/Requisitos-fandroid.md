@@ -6,7 +6,7 @@
 
 •	Se de poder asociar una tarjeta de crédito a la cuenta creada
 
-•	Se debe poder comprar artículos dentro de la pagina sin necesidad de volver a ingresar la información de la tarjeta de crédito.
+•	Se debe poder comprar aplicaciones dentro de la pagina sin necesidad de volver a ingresar la información de la tarjeta de crédito.
 
 •	Se debe poder acceder a la cuenta y modificar la información desde cualquier dispositivo.
 
