@@ -1,4 +1,5 @@
 °°|Requisitos Funcionales Caso del Tren:|°°
+
 •Se carga a la cuenta de la tarjeta de credito.
 
 •Seleccion de Destino.
