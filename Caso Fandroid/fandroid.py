@@ -102,7 +102,7 @@ productos = [
     Producto("GameYiar34", 150),
     Producto("Genshin Impact month pass", 3000),
     Producto("Canvas Pro", 50),
-    Producto("Warzone,1899) 
+    Producto("Warzone",1899) 
 ]
 
 premios = [
