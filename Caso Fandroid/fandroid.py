@@ -23,12 +23,12 @@ class Usuario:
 
     def comprar_articulo(user, precio):
         if user.informacion_tarjeta_credito:
-            user.puntos += 10
+            user.puntos += precio // 10
+            print("La canidad de puntos es: ", user.puntos)
             return True
         return False
 
     def canjear_puntos(user, puntos_requeridos):
-        print(f"La cantidad de puntos en la cuenta son: {puntos}")
         if user.puntos >= puntos_requeridos:
             user.puntos -= puntos_requeridos
             return True
@@ -102,7 +102,7 @@ productos = [
     Producto("GameYiar34", 150),
     Producto("Genshin Impact month pass", 3000),
     Producto("Canvas Pro", 50),
-    Producto("Warzone",1899) 
+    Producto("Warzone",1900) 
 ]
 
 premios = [
