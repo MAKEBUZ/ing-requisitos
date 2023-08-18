@@ -10,15 +10,15 @@ class Usuario:
         }
         user.puntos = 0
 
-    def modificar_informacion(self, nueva_contrasenha=None, nueva_marca=None, nuevo_numero=None, nuevo_vencimiento=None, nuevo_cvv=None):
+    def modificar_informacion(user, nueva_contrasenha=None, nueva_marca=None, nuevo_numero=None, nuevo_vencimiento=None, nuevo_cvv=None):
         if nueva_contrasenha:
-            self.contrasenha = nueva_contrasenha
+            user.contrasenha = nueva_contrasenha
         if nueva_marca or nuevo_numero or nuevo_vencimiento or nuevo_cvv:
-            self.informacion_tarjeta_credito.update({
-                "marca": nueva_marca or self.informacion_tarjeta_credito["marca"],
-                "numero": nuevo_numero or self.informacion_tarjeta_credito["numero"],
-                "vencimiento": nuevo_vencimiento or self.informacion_tarjeta_credito["vencimiento"],
-                "cvv": nuevo_cvv or self.informacion_tarjeta_credito["cvv"]
+            user.informacion_tarjeta_credito.update({
+                "marca": nueva_marca or user.informacion_tarjeta_credito["marca"],
+                "numero": nuevo_numero or user.informacion_tarjeta_credito["numero"],
+                "vencimiento": nuevo_vencimiento or user.informacion_tarjeta_credito["vencimiento"],
+                "cvv": nuevo_cvv or user.informacion_tarjeta_credito["cvv"]
             })
 
     def comprar_articulo(user, precio):
